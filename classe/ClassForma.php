@@ -1,5 +1,5 @@
 <?php
-require_once "conf/Conexao.php";
+
 class Forma{
     private $id;
     private $cor; 
@@ -21,6 +21,15 @@ class Forma{
     public function gettabuleiro_idtabuleiro() {return $this->tabuleiro_idtabuleiro;}
     public function settabuleiro_idtabuleiro($tabuleiro_idtabuleiro){if ($tabuleiro_idtabuleiro >  0)$this->tabuleiro_idtabuleiro = $tabuleiro_idtabuleiro;}
     //get e set
+
+    public function __toString(){
+        $str.= "ID" .$this->getid().
+        "<br> Cor".$this->getCor().
+        "<br> Tabuleiro".$this->gettabuleiro_idtabuleiro();
+        return $str;
+        
+    }
+
         
     }
 

@@ -7,12 +7,20 @@ class Retangulo extends Forma{
         $this->setAltura($altura);
         $this->setBase($base);
     }
-
+    public function getaltura(){ return $this->altura; }
+    public function setaltura($altura){ $this->altura = $altura;}
+    public function getbase() {return $this->base;}
+    public function setbase($base){if (strlen($base) > 0)$this->base = $base;}
     
+    public function __toString(){
+        $str= parent::__toString();
+        $str.= "Tamanho da altura" .$this->getAltura().
+        "<br> Tamanho da base".$this->getBase();
+        return $str;
+    }
+    
+
+
 }
-
-
-
-    
         
 ?>
